@@ -1,0 +1,192 @@
+body {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(images/bg.jpg);
+	background-size: cover;
+}
+
+h1 {
+	font-family: 'Sriracha', cursive;
+	font-size: 3em;
+	text-align: center;
+	letter-spacing: 2px;
+	margin:  0;
+}
+
+h3 {
+	font-family: 'Prompt', sans-serif;
+}
+
+div {
+	position: relative;
+  	overflow: hidden;
+  	border-radius: 5px;
+}
+
+
+/* cards board */
+/* ----------- */
+
+#cards-container {
+	display: grid;
+	width: 100%;
+	grid-gap: 1vh;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.card-par {
+	transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card-back {
+	content: url("images/back.jpg");
+}
+
+.card-front, .card-back {
+	width: 100%;
+	position: absolute;
+  	object-fit: cover;
+  	transform: translate(-50%, -50%) rotateY(-180deg);
+  	top: 50%;
+  	left: 50%; 	
+  	transition: all 0.5s ease-in;
+  	perspective: 10px;
+}
+
+.card-par.up .card-front {
+	opacity: 1;
+}
+
+.card-par.up .card-back {
+   opacity: 0;
+}
+
+.up {
+	transform: rotateY(180deg);
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+
+/* time & pairs bar */
+/* ---------------- */
+
+.data {
+	display: flex;
+	margin:  0 auto;
+	margin-bottom: 20px;
+	padding: 0 10vw;
+	font-size: 1.5em;
+}
+
+#time {
+	margin: 0 auto;
+}
+
+#pairs_cnt {
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 700px) {
+	h1 {
+		font-size: 2em;
+	}
+
+	.data {
+		font-size: 1em;
+	}
+}
+
+
+/*  win message - popup  */
+/*  -------------------  */
+
+.win-message {
+	display: none;
+  	position: fixed;
+  	z-index: 1;
+  	left: 0;
+  	top: 0;
+  	width: 100%;
+  	height: 100%;
+  	background-color: rgba(0,0,0,0.5);
+  	font-family: 'Prompt', sans-serif;
+  	text-align: center;
+}
+
+.win-message-content {
+	background-color: lightpink;
+	opacity: 0.85;
+	margin: 5% 15%;
+	padding:0;
+}
+
+.win-message-content p {
+		font-size: 1em;
+}
+
+.win-message-content h2 {
+	font-size: 2em;
+	letter-spacing: 5px;
+}
+
+.img-holder {
+	margin: 0 ;
+	padding: 0;
+}
+
+.img-holder img{
+	max-width:100%;
+   height:auto;
+   border-radius: 5px;
+}
+
+.win-message button {
+	margin: 20px;
+	color: white;
+	background-color: #FF5C77;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+.win-message button a{
+	color: white;
+	text-decoration: none;
+}
+
+.win-message button:hover{
+	background-color: #F50029;
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 750px) {
+	.win-message-content {
+		margin: 20% 15%;
+	}
+
+	.win-message-content h2 {
+		font-size: 1.5em;
+		letter-spacing: 2px;
+	}
+
+	.img-holder img{
+		max-width:80%;
+   	height:auto;
+	}
+
+	.win-message button {
+		margin: 10px;
+		padding: 10px;
+		font-size: 1em;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.win-message-content p {
+		font-size: 0.8em;
+	}
+}

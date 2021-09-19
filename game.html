@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href=game.css>
+		<link href="https://fonts.googleapis.com/css2?family=Prompt:ital@1&family=Sriracha&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<title> Memory Game - game </title>
+	</head>
+	<body>
+
+		<h1>Memory Game</h1>
+
+		<div class="data">
+			<h3 id="time">Time:</h3>
+			<h3 id="pairs_cnt"></h3>
+		</div>
+
+		<div id="cards-container"></div>
+
+		<div id="win-message" class="win-message">
+		  <div class="win-message-content">
+		    <h2>You Won!</h2>
+		    <p id="time-message">You found all matches in </p>
+		    <div class="img-holder"><img src="images/win.gif"></div>
+		    <button><a href=index.html>New Game</a></button>
+		    <button><a href="javascript:location.reload (true)">Start Over</a></script></button>
+		  </div>
+		</div>
+
+		<script src="game.js"></script>
+
+	</body>
+</html>
+
+

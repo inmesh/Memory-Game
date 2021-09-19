@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href=index.css>
+		<link href="https://fonts.googleapis.com/css2?family=Prompt:ital@1&family=Sriracha&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<title> Memory Game - main </title>
+	</head>
+	<body>
+
+		<h1>Memory Game</h1>
+
+		<form action=game.html method="GET">
+			<div class="form-inputs">
+				<label for="board-size">1. Choose board size:</label>
+				<input list="board-size" name="board-size" autocomplete="off">
+				<datalist id="board-size">
+					<option value="4x2"></option>
+					<option value="4x3"></option>
+					<option value="4x4"></option>
+					<option value="4x5"></option>
+					<option value="6x6"></option>
+				</datalist>
+
+				<label for="theme">2. Choose a theme:</label>
+				<input type="text" id="theme" name="theme">
+
+				<p id="attn">!<span id="cors-msg">To use the theme option, first install and enable this <a href="https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc/related" target="_blank">chrome extention</a></span></p>
+			</div>
+
+			<p>or</p>
+			<div class="imgs-chkbx">
+				<input type="checkbox" id="def-imgs" name="def">
+	  			<label for="def">Use default images</label>
+			</div>
+
+			<input class="play-button" type="submit" value="Let's Play!">
+
+		</form>
+
+		<script>
+			$('#def-imgs').change(function(){
+  				if($(this).is(':checked')) {    
+    				$('#theme').prop('disabled', true)
+    			} else {
+    				$('#theme').prop('disabled', false)
+    			}
+			})
+		</script>
+
+	</body>
+</html>

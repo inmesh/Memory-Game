@@ -1,0 +1,127 @@
+body {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(images/bg.jpg);
+	background-size: cover;
+	margin-top: 10vh;
+	font-family: 'Prompt', sans-serif;
+	font-weight: bolder;
+}
+
+h1 {
+	font-family: 'Sriracha', cursive;
+	font-size: 3em;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+p {
+	text-align: center;
+	margin: 5px;
+}
+
+form {
+	margin: 0 auto;
+	width: fit-content;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.form-inputs {
+	display: grid;
+	grid-template-columns: repeat(3, max-content);
+	row-gap: 4vh;
+}
+
+#def-imgs {
+	margin: 0;
+	width: 20px;
+	height: 15px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.imgs-chkbx {
+	text-align: center;
+}
+
+label, input {
+	align-self: center;
+}
+
+label {
+	letter-spacing: 1px;
+}
+
+input {
+	margin: 5px;
+	border-radius: 5px;
+	opacity: 0.8;
+	padding: 3px;
+	width: 100px;
+}
+
+input::-webkit-calendar-picker-indicator {
+	opacity: 100;
+}
+
+#theme, label[for="theme"], #attn {
+	grid-row-start: 2;
+}
+
+.play-button {
+	margin: 5vh auto 0;
+	color: white;
+	background-color: #FF5C77;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-size: 1.2em;
+	display: block;
+	width: auto;
+}
+
+.play-button a{
+	color: white;
+	text-decoration: none;
+}
+
+.play-button:hover, #attn:hover {
+	background-color: #F50029;
+	text-decoration: none;
+}
+
+#attn {
+	font-size: 0.8em;
+	background-color: #FF5C77;
+	color: white;
+	border-radius: 50%;
+	width: 20px;
+	margin: 10px 0;
+	padding: 2px;
+}
+
+#cors-msg {
+	display: none;
+}
+
+#attn:hover #cors-msg {
+    display: block;
+    position: absolute;
+    background-color: gray;
+    border-radius: 5px;
+    max-width: 180px;
+    overflow: wrap;
+}
+
+#cors-msg:hover {
+	display: inline-block;
+}
+
+#cors-msg a {
+	text-decoration: none;
+	color: #B1D4E0;
+}
+
+#cors-msg a:hover {
+	color: #F79489;
+}
