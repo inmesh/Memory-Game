@@ -60,17 +60,18 @@ if (window.location.search.indexOf("def") > 0) {
     // search images from google via serpapi
     var imgs = [];
     var theme = window.location.search.slice(window.location.search.indexOf("theme") + 6);
+    console.log(theme)
     const http_req = new XMLHttpRequest();
-    const url = "http://localhost:3000/?a=" + theme + "&items=" + num_of_images_pairs
+    const url='https://serpapi.com/search.json?q=' + theme + '&tbm=isch&ijn=0&api_key=83c99a1203b16f1cf30a07b40de0ab453bd7562718202cf6fb3af4aee6cc0346';
     http_req.open("GET", url);
     http_req.send();
 
     // when request is back, create the board and start the game.
     http_req.onreadystatechange = function get_imgs() {
         if (this.readyState == 4 && this.status == 200) {
-            var images_res = JSON.parse(this.responseText);
+            var images_res = JSON.parse(this.responseText).images_results;
             for (i = 0; i < num_of_images_pairs; i++) {
-                imgs[i] = images_res[i];
+                imgs[i] = images_res[i].thumbnail;
             }
 
             setUpGame()
