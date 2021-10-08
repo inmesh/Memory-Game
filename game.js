@@ -61,7 +61,7 @@ if (window.location.search.indexOf("def") > 0) {
     var imgs = [];
     var theme = window.location.search.slice(window.location.search.indexOf("theme") + 6);
     const http_req = new XMLHttpRequest();
-    const url = "http://localhost:3000/?a=" + theme + "&items=" + num_of_images_pairs
+    const url = "https://9srk8gvc33.execute-api.us-east-2.amazonaws.com/staging/images?a=" + theme + "&items=" + num_of_images_pairs
     http_req.open("GET", url);
     http_req.send();
 
