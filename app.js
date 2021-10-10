@@ -21,7 +21,7 @@ const our_server = http.createServer(function (req, res) {
   if (queryObject.a) {
     const request = require('request');
 
-    request('https://serpapi.com/search.json?q=' + queryObject.a +'&tbm=isch&ijn=0&api_key=78179d20ab20d10eed70f40c93a0dbc849e1cc71be9be2af94b94346cbbbac28', { json: true }, (err, res2, body) => {
+    request('https://serpapi.com/search.json?q=' + queryObject.a +'&tbm=isch&ijn=0&api_key=PUT_YOUR_SERPAPI_KEY_HERE', { json: true }, (err, res2, body) => {
       if (err) { return console.log(err); }
       // console.log(body.images_results[0].thumbnail);
       // console.log(body);
