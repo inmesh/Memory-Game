@@ -125,3 +125,30 @@ input::-webkit-calendar-picker-indicator {
 #cors-msg a:hover {
 	color: #F79489;
 }
+
+/* about */
+.about {
+	position: fixed;
+  	bottom: 0px;
+	color: black;
+	width: 100vw;
+	text-align: center;
+  }
+  
+  .about h5 {
+	margin: 10px;
+	display: inline-block;
+	text-align: center;
+	line-height: 2em;
+	vertical-align: super;
+  }
+  
+  .about a {
+	size: fit-content;
+	margin: 20px 0 0 0;
+	display: inline-block;
+  }
+  
+  /* .about img {
+	filter: brightness(0) invert(1);
+  } */
